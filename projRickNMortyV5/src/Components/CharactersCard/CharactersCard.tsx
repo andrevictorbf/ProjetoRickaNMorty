@@ -2,6 +2,7 @@
 import React from 'react';
 import { CharacterType } from '../../Types';
 import { Card, Col, ListGroup } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 interface CharactersCardProps {
     characters: CharacterType[] | null;
@@ -15,8 +16,8 @@ export const CharactersCard: React.FC<CharactersCardProps> = ({ characters }) =>
     return (
         <div>
             {characters.map(character => (
-              <Col md={4} className="shadow-sm mb-4 rounded">
-                  <Card style={{ width: '18rem' }}>
+              <Col md={4} className=" mb-4 ">
+                  <Card className="shadow-sm mb-5 bg-body rounded"  style={{ width: '18rem' }}>
                   <Card.Img variant="top" src={character.image} />
                   <Card.Body>
                     <Card.Title>{character.name}</Card.Title>

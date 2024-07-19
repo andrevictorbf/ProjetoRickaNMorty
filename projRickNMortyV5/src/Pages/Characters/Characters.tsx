@@ -3,6 +3,7 @@ import { getAllCharacters } from "../../Services";
 import { CharacterType } from "../../Types";
 import { Col, Container, Row } from "react-bootstrap";
 import { CharactersCard } from "../../Components";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -25,10 +26,10 @@ export const Characters: React.FC = () => {
     return (
         <>
             <Container>
-                <Row className="gap-4  ">
+                <Row className="gap-4 ">
                     <h1 className="mb-4 my-5 text-center">Personagens</h1>
                     {characters && characters.map((character) => (
-                        <Col key={character.id} >
+                        <Col className="" key={character.id} >
                             <CharactersCard characters={[character]} />
                         </Col>
                     ))}
