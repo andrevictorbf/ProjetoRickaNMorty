@@ -8,10 +8,10 @@ export const getAllCharacters = async (): Promise<CharacterType[]> => {
 
 export const getSingleCharacter = async (id: number): Promise<CharacterType[]> => {
     const response = await instance.get(`/character/${id}`);
-    return response.data;
+    return response.data.results;
 }
 
 export const getCharacterPagination = async (page: number): Promise<CharacterType[]> => {
     const response = await instance.get(`/character/?page=${page}`);
-    return response.data;
+    return response.data.info;
 }

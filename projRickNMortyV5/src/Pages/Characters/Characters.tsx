@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { getAllCharacters } from "../../Services";
 import { CharacterType } from "../../Types";
-import { Row } from "react-bootstrap";
-import CharactersCard from "../../Components/CharactersCard/CharactersCard";
+import { Col, Container, Row } from "react-bootstrap";
+import { CharactersCard } from "../../Components";
+
 
 
 export const Characters: React.FC = () => {
@@ -23,10 +24,17 @@ export const Characters: React.FC = () => {
 
     return (
         <>
-            <Row className="gap-4">
-                <h3 className="mb-4">Personagens</h3>
-                < CharactersCard characters={characters} />
-            </Row>
+            <Container>
+                <Row className="gap-4  ">
+                    <h1 className="mb-4 my-5 text-center">Personagens</h1>
+                    {characters && characters.map((character) => (
+                        <Col key={character.id} >
+                            <CharactersCard characters={[character]} />
+                        </Col>
+                    ))}
+                </Row>
+            </Container>
+
 
         </>
 
