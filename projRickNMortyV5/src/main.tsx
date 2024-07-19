@@ -5,7 +5,7 @@ import { Wrapper } from './Shared/Wrapper/Wrapper'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Wrapper/>
+    <Wrapper />
     <Characters />
   </React.StrictMode>,
 )
