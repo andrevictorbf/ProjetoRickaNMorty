@@ -35,7 +35,8 @@ export const CharactersCard: React.FC<CharactersCardProps> = ({ characters }) =>
                     <Card.Link href="#">Another Link</Card.Link>
                   </Card.Body>
                 </Card>
-                {/* // <div key={character.id}>
+                {/* esqueleto dos cards 
+                // <div key={character.id}>
                 //     <h2>{character.name}</h2>
                 //     <p>{character.status}</p>
                 //     <img src={character.image} alt={character.name} />

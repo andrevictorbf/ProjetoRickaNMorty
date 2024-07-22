@@ -1,14 +1,19 @@
-// refatorar para os episodios 
-import { CharacterType } from '../../Types';
+
+// refatorar para os episodios - ok
+import { episodeType } from '../../Types';
 import { instance } from "../Instance";
 
-export const getAllCharacters = async (): Promise<CharacterType[]> => {
+export const getAllEpisodes = async (): Promise<episodeType[]> => {
 
-    const response = await instance.get('/character');
-    return response.data;
+    const response = await instance.get('/episodes');
+    return response.data.results;
 }
 
-export const getCharacter = async (id: number): Promise<CharacterType[]> => {
-    const response = await instance.get(`/character/${id}`);
-    return response.data;
+export const getSingleEpisode = async (id: number): Promise<episodeType[]> => {
+    const response = await instance.get(`/episode/${id}`);
+    return response.data.results;
+}
+export const getCharacterByEpisode = async (id: number): Promise<episodeType[]> => {
+    const response = await instance.get(`/episode/${id}/characters`);
+    return response.data.results;
 }
