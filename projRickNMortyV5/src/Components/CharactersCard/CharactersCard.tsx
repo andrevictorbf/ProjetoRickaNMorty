@@ -5,13 +5,13 @@ import { Card, Col, ListGroup } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 interface CharactersCardProps {
-    characters: CharacterType[] | null;
+  characters: CharacterType[] | null;
 }
 
 export const CharactersCard: React.FC<CharactersCardProps> = ({ characters }) => {
-    if (!characters || !Array.isArray(characters)) {
-        return <div>Nenhum personagem encontrado.</div>;
-    }
+  if (!characters || !Array.isArray(characters)) {
+    return <div>Nenhum personagem encontrado.</div>;
+  }
 
     return (
         <div>

@@ -24,7 +24,7 @@ export const Characters: React.FC = () => {
     }, []);
 
     return (
-        <>
+        
             <Container>
                 <Row className="gap-4 ">
                     <h1 className="mb-4 my-5 text-center">Personagens</h1>
@@ -37,7 +37,7 @@ export const Characters: React.FC = () => {
             </Container>
 
 
-        </>
+        
 
 
     )
