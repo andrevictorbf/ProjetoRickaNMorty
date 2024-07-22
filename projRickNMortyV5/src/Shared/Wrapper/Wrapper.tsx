@@ -8,9 +8,6 @@ export const Wrapper = (): JSX.Element => {
             <Header />
             <Outlet />
         </>
-
-
-
     )
 }
 
