@@ -3,6 +3,7 @@ import React from 'react';
 import { CharacterType } from '../../Types';
 import { Button, Card, Col, ListGroup } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 interface CharactersCardProps {
   characters: CharacterType[] | null;
@@ -31,7 +32,9 @@ export const CharactersCard: React.FC<CharactersCardProps> = ({ characters }) =>
               <ListGroup.Item>{character.location.name}</ListGroup.Item>
             </ListGroup>
             <Card.Body className="d-flex justify-content-center">
-              <Button variant="dark">Veja mais!</Button>
+              <Link to={`/character/${character.id}`}>
+                <Button variant="dark">Veja mais!</Button>
+              </Link>
             </Card.Body>
 
           </Card>
