@@ -31,8 +31,6 @@ export const Episodes: React.FC = () => {
                         <EpisodeCards episodes={[episode]} />
                     </Col>
                 ))}
-
-
             </Row>
 
         </Container>

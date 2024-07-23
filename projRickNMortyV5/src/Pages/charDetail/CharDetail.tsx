@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { getSingleCharacter, charEpisode } from "../../Services";
 import { CharacterType, EpisodeType } from "../../Types";
+import { Container, Row, Col } from "react-bootstrap";
+import { EpisodeCards } from "../../Components";
 
 interface RouteParams {
   id: string;
@@ -44,14 +46,18 @@ const CharDetail: React.FC = () => {
       <p>Espécie: {character.species}</p>
       <p>Tipo: {character.type || 'N/A'}</p>
       
-      <h2>Episódios:</h2>
-      <ul>
-        {episodes.map(episode => (
-          <li key={episode.id}>
-            {episode.name} (Air date: {episode.air_date})
-          </li>
-        ))}
-      </ul>
+  
+      <Container>
+            <Row className="gap-4">
+                <h1 className=" my-5 text-center">Episodios</h1>
+                {episodes?.map((episode) => (
+                    <Col key={episode.id} >
+                        <EpisodeCards episodes={[episode]} />
+                    </Col>
+                ))}
+            </Row>
+
+        </Container>
     </div>
   );
 };
