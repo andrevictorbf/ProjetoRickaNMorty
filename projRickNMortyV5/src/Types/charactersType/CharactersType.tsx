@@ -1,4 +1,5 @@
 export interface CharacterType {
+    [x: string]: any;
     id: number;
     name: string;
     status: string;
