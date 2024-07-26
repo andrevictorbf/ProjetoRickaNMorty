@@ -1,3 +1,3 @@
 export * from './Instance'
-export * from './Locations'
+export * from './locations'
 export * from './Characters'
