@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 export const NavbarWrapped = (): JSX.Element => {
     return (
-        <>
+        
             <Navbar bg="dark" data-bs-theme="dark">
                 <Container fluid>
                     <Navbar.Brand >Rick and Morty </Navbar.Brand>
@@ -29,7 +29,7 @@ export const NavbarWrapped = (): JSX.Element => {
                     </Form>
                 </Container>
             </Navbar>
-        </>
+        
     )
 }
 

@@ -27,7 +27,7 @@ export const CharactersCard: React.FC<CharactersCardProps> = ({ characters }) =>
               </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
-              <ListGroup.Item>{character.gender}</ListGroup.Item>
+              <ListGroup.Item><Card.Text>Gênero: {character.gender} </Card.Text></ListGroup.Item>
               <ListGroup.Item>{character.origin.name}</ListGroup.Item>
               <ListGroup.Item>{character.location.name}</ListGroup.Item>
             </ListGroup>
