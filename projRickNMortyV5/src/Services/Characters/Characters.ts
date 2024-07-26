@@ -19,7 +19,6 @@ export const charEpisode = async (id: number): Promise<EpisodeType[]> => {
     const episodesResponses = await Promise.all(episodePromises);
     return episodesResponses.map(res => res.data);
   };
-  
 export const getCharacterPagination = async (page: number): Promise<CharacterType[]> => {
     const response = await instance.get(`/character/?page=${page}`);
     return response.data.info;

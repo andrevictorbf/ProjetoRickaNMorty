@@ -9,6 +9,7 @@ export const getAllEpisodes = async (): Promise<EpisodeType[]> => {
     return response.data.results;
 }
 
+
 export const getSingleEpisode = async (id: number): Promise<EpisodeType> => {
     const response = await instance.get(`/episode/${id}`);
     return response.data;
