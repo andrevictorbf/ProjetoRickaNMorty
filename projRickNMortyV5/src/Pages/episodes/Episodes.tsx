@@ -24,7 +24,7 @@ export const Episodes: React.FC = () => {
 
 
         <Container>
-            <Row className="gap-4">
+            <Row className="gap-4 my-5">
                 <h1 className="mb-4 my-5 text-center">Episodios</h1>
                 {episodes?.map((episode) => (
                     <Col key={episode.id} >

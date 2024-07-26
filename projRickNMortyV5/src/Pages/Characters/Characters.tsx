@@ -28,7 +28,7 @@ export const Characters: React.FC = () => {
             <Container>
                 <Row className="gap-4 ">
                     <h1 className="mb-4 my-5 text-center">Personagens</h1>
-                    {characters && characters.map((character) => (
+                    {characters?.map((character) => (
                         <Col className="" key={character.id} >
                             <CharactersCard characters={[character]} />
                         </Col>

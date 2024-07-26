@@ -1,5 +1,5 @@
 export interface CharacterType {
-    [x: string]: any;
+    [x: string]: unknown;
     id: number;
     name: string;
     status: string;
