@@ -3,6 +3,7 @@ import { getAllEpisodes } from "../../Services/Episodes";
 import { EpisodeType } from "../../Types";
 import { EpisodeCards } from "../../Components";
 import { Col, Container, Row } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
