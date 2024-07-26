@@ -6,3 +6,4 @@ export interface LocationsType {
     residents: string[];
     created: string;
 }
+
