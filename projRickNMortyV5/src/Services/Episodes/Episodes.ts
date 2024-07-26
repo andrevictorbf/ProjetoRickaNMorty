@@ -19,8 +19,3 @@ export const getSingleEpisode = async (id: number): Promise<EpisodeType> => {
     const response = await instance.get(`/episode/${id}`);
     return response.data;
 }
-
-export const getCharacterByEpisode = async (id: number): Promise<EpisodeType[]> => {
-    const response = await instance.get(`/episode/${id}/characters`);
-    return response.data;
-}
