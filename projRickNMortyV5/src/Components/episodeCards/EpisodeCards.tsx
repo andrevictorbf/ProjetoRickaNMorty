@@ -2,6 +2,7 @@ import { Button, Card } from "react-bootstrap";
 import { EpisodeType } from "../../Types";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from "react-router-dom";
 interface EpisodeCardsProps {
   episodes: EpisodeType[] | null;
 }
@@ -23,9 +24,9 @@ export const EpisodeCards: React.FC<EpisodeCardsProps> = ({ episodes }) => {
               {episode.episode}
             </Card.Text>
           </Card.Body>
-          <Card.Body className="d-flex justify-content-center">
+          <Link to={`/episode/${episode.id}`}>
             <Button variant="dark">Veja mais!</Button>
-          </Card.Body>
+          </Link>
         </Card>
       ))}
     </div>

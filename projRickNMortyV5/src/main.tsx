@@ -5,6 +5,7 @@ import { Wrapper } from './Shared/Wrapper/Wrapper'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import CharDetail from './Pages/charDetail/CharDetail'
+import EpisodeDetail from './Pages/episodeDetail/EpisodeDetail'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="episodios" element={<Episodes />} />
           <Route path="localizacoes" element={<Locations/>} />
           <Route path="character/:id" element={<CharDetail />} />
+          <Route path="episode/:id" element={<EpisodeDetail />} />
 
         </Route>
       </Routes>

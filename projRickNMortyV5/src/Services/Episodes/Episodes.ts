@@ -1,21 +1,26 @@
 
-// refatorar para os episodios - ok
-import { EpisodeType } from '../../Types';
+import { CharacterType, EpisodeType } from '../../Types';
 import { instance } from "../Instance";
 
 export const getAllEpisodes = async (): Promise<EpisodeType[]> => {
-
     const response = await instance.get('/episode');
     return response.data.results;
 }
 
+export const episodeChars = async (id: number): Promise<CharacterType[]> => {
+    const response = await instance.get(`/episode/${id}/`);
+    const characters = response.data.characters;
+    const characterPromises = characters ? characters.map((url: string) => instance.get(url)) : [];
+    const charactersResponses = await Promise.all(characterPromises);
+    return charactersResponses.map(res => res.data);
+}
 
 export const getSingleEpisode = async (id: number): Promise<EpisodeType> => {
     const response = await instance.get(`/episode/${id}`);
     return response.data;
 }
 
-// export const getCharacterByEpisode = async (id: number): Promise<episodeType[]> => {
-//     const response = await instance.get(`/episode/${id}/characters`);
-//     return response.data.results;
-// }
+export const getCharacterByEpisode = async (id: number): Promise<EpisodeType[]> => {
+    const response = await instance.get(`/episode/${id}/characters`);
+    return response.data;
+}
