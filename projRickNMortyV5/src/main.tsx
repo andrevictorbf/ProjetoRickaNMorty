@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Characters, Episodes  } from './Pages' 
+import { Characters, Episodes, Locations  } from './Pages' 
 import { Wrapper } from './Shared/Wrapper/Wrapper'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="personagens" element={<Characters />} />
           <Route path="episodios" element={<Episodes />} />
           <Route path="/character/:id" element={<CharDetail/>} />
-          <Route path="localizacoes" element={<div>Localizações</div>} />
+          <Route path="localizacoes" element={<Locations/>} />
         </Route>
       </Routes>
     </BrowserRouter>

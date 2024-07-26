@@ -21,8 +21,6 @@ export const Episodes: React.FC = () => {
         fetchEpisodes();
     }, []);
     return (
-
-
         <Container>
             <Row className="gap-4 my-5">
                 <h1 className="mb-4 my-5 text-center">Episodios</h1>
@@ -34,10 +32,6 @@ export const Episodes: React.FC = () => {
             </Row>
 
         </Container>
-
-
-
-
     )
 }
 
