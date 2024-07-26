@@ -41,28 +41,28 @@ const CharDetail: React.FC = () => {
   return (
     <div>
       <Container><h1 className=" my-4 text-center ">Detalhes do Personagem</h1></Container>
-    <Container>
-      <Row className="justify-content-center my-5">
-        <Col xs={12}>
-          <Card className="mx-auto shadow-sm" style={{ width: '100%' }}>
-            <Card.Body>
-              <Row>
-                <Col md={8} className="text-start">
-                  <Card.Title>{character.name}</Card.Title>
-                  <Card.Text>Espécie: {character.species}</Card.Text>
-                  <Card.Text>Status: {character.status}</Card.Text>
-                  <Card.Text>Origem: {character.origin.name}</Card.Text>
-                  <Card.Text>Localização: {character.location.name}</Card.Text>
-                </Col>
-                <Col md={4}>
-                  <Card.Img src={character.image} className="img-fluid" />
-                </Col>
-              </Row>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+      <Container>
+        <Row className="justify-content-center my-5">
+          <Col xs={12}>
+            <Card className="mx-auto shadow-sm" style={{ width: '100%' }}>
+              <Card.Body>
+                <Row>
+                  <Col md={8} className="text-start">
+                    <Card.Title>{character.name}</Card.Title>
+                    <Card.Text>Espécie: {character.species}</Card.Text>
+                    <Card.Text>Status: {character.status}</Card.Text>
+                    <Card.Text>Origem: {character.origin.name}</Card.Text>
+                    <Card.Text>Localização: {character.location.name}</Card.Text>
+                  </Col>
+                  <Col md={4}>
+                    <Card.Img src={character.image} className="img-fluid" />
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
 
 
 
