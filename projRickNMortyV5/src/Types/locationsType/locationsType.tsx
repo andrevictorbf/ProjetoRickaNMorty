@@ -4,6 +4,6 @@ export interface LocationsType {
     type: string;
     dimension: string;
     residents: string[];
+    url: string;
     created: string;
 }
-
