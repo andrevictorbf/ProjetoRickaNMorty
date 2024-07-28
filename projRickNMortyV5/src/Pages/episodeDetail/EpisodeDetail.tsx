@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CharacterType, EpisodeType } from "../../Types";
 import { episodeChars, getSingleEpisode } from "../../Services/Episodes";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { CharactersCard } from "../../Components";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -35,7 +35,10 @@ const EpisodeDetail: React.FC = () => {
 
   return (
     <div>
-      <Container><h1 className=" my-4 text-center ">Detalhes do Episodio</h1></Container>
+      <Container>
+      <Button variant="dark" href="/episodios" className="my-5">Voltar</Button>
+        <h1 className=" my-4 text-center ">Detalhes do Episodio</h1>
+        </Container>
       <Container>
         <Row className="justify-content-center my-5">
           <Col xs={12}>
@@ -44,8 +47,8 @@ const EpisodeDetail: React.FC = () => {
                 <Row>
                   <Col className="text-start">
                     <Card.Title>{episode.name}</Card.Title>
-                    <Card.Text>Temporada: {episode.air_date}</Card.Text>
-                    <Card.Text>Status: {episode.episode}</Card.Text>
+                    <Card.Text>Data de exibicao: {episode.air_date}</Card.Text>
+                    <Card.Text>Temporada: {episode.episode}</Card.Text>
                   </Col>
                 </Row>
               </Card.Body>

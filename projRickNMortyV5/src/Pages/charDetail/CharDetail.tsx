@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { getSingleCharacter, charEpisode } from "../../Services";
 import { CharacterType, EpisodeType } from "../../Types";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { EpisodeCards } from "../../Components";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -40,7 +40,11 @@ const CharDetail: React.FC = () => {
 
   return (
     <div>
-      <Container><h1 className=" my-4 text-center ">Detalhes do Personagem</h1></Container>
+
+      <Container>
+        <Button variant="dark" href="/personagens" className="my-5">Voltar</Button>
+        <h1 className=" my-4 text-center ">Detalhes do Personagem</h1>
+      </Container>
       <Container>
         <Row className="justify-content-center my-5">
           <Col xs={12}>

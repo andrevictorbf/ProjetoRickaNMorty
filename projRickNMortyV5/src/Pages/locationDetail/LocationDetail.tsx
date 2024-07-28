@@ -4,7 +4,7 @@ import { CharacterType, LocationsType } from "../../Types";
 import { getSingleLocation, locationChars } from "../../Services";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from "react-bootstrap/esm/Container";
-import { Card, Col, Row } from "react-bootstrap";
+import { Button, Card, Col, Row } from "react-bootstrap";
 import { CharactersCard } from "../../Components";
 
 interface RouteParams {
@@ -35,7 +35,11 @@ export const LocationDetail: React.FC = () => {
 
     return (
         <div>
-            <Container><h1 className=" my-4 text-center ">Detalhes da Localização:</h1></Container>
+            <Container>
+                <Button variant="dark" href="/episodios" className="my-5">Voltar</Button>
+                <h1 className=" my-4 text-center ">Detalhes da Localização:</h1>
+
+            </Container>
             <Container>
                 <Row className="justify-content-center my-5">
                     <Col xs={12}>

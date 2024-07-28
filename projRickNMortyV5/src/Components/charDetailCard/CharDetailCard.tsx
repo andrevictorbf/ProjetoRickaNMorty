@@ -9,6 +9,7 @@ export const charDetailCard: React.FC<CharDetailCardProps> = ({ characters }) =>
         return <div>Nenhum personagem encontrado.</div>;
     }
     return (
+
         <Container>
             {characters.map(character => (
                 <Card key={character.id} style={{ height: '18rem' }}>
@@ -32,6 +33,7 @@ export const charDetailCard: React.FC<CharDetailCardProps> = ({ characters }) =>
                 </Card>
             ))};
         </Container>
+
 
     );
 };
