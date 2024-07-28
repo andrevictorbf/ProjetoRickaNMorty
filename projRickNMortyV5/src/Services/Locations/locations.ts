@@ -16,5 +16,5 @@ export const locationChars = async (id: number): Promise<CharacterType[]> => {
 
 export const getSingleLocation = async (id: number): Promise<LocationsType> => {
     const response = await instance.get(`/location/${id}`);
-    return response.data.results;
+    return response.data;
 }
