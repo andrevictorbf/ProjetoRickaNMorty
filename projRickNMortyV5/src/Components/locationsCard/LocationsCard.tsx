@@ -1,5 +1,6 @@
 import { Card, Button } from "react-bootstrap";
 import { LocationsType } from "../../Types";
+import { Link } from "react-router-dom";
 
 interface LocationsCardProps {
     locations: LocationsType[] | null;
@@ -23,7 +24,9 @@ export const LocationsCard: React.FC<LocationsCardProps> = ({ locations }) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Body className="d-flex justify-content-center">
+                        <Link to={`/location/${location.id}`}>
                         <Button variant="dark">Veja mais!</Button>
+                        </Link>
                     </Card.Body>
                 </Card>
             ))}

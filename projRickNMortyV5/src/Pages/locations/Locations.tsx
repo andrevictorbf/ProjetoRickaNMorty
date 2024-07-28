@@ -13,7 +13,7 @@ export const Locations = () => {
                 const data = await getAllLocations();
                 setLocations(data);
             } catch (error) {
-                console.error('Erro ao buscar os episodios:', error);
+                console.error('Erro ao buscar os localizacoes', error);
             }
         };
 
