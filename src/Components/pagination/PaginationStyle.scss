@@ -1,0 +1,27 @@
+.dark {
+    .page-link {
+        background-color: #343a40;
+        color: #ffffff;
+        border: 1px solid #454d55;
+
+        &:hover {
+            background-color: #495057;
+            color: #ffffff;
+        }
+    }
+    .page-item{
+        margin: 8px 0 ;
+    }
+
+    .page-item.active .page-link {
+        background-color: #ffffff;
+        border-color: #ffffff;
+        color: #343a40;
+    }
+
+    .page-item.disabled .page-link {
+        background-color: #343a40;
+        color: #6c757d;
+    }
+}
+
