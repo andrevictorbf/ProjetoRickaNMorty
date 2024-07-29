@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Container, Form, Nav, Navbar } from "react-bootstrap"
+import { Container, Nav, Navbar } from "react-bootstrap"
 import { Link } from 'react-router-dom';
 
 
@@ -11,22 +11,15 @@ export const NavbarWrapped = (): JSX.Element => {
         
             <Navbar bg="dark" data-bs-theme="dark">
                 <Container fluid>
+                    <Link to='/'>
                     <Navbar.Brand >Rick and Morty </Navbar.Brand>
-                    <Nav className="me-auto">
-
+                    </Link>
+                    <Nav className="d-flex">
                         <Nav.Link> <Link to='/personagens'>Personagens</Link> </Nav.Link>
                         <Nav.Link  ><Link to='/episodios'>Episódios</Link> </Nav.Link>
                         <Nav.Link><Link to='/localizacoes'>Localizações</Link></Nav.Link>
                     </Nav>
-                    <Form className="d-flex">
-                        <Form.Control
-                            type="search"
-                            placeholder="Pesquisar"
-                            className="me-3"
-                            aria-label="Search"
-                        />
-                        <Button variant="outline-light">Pesquisar</Button>
-                    </Form>
+
                 </Container>
             </Navbar>
         

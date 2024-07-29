@@ -2,11 +2,14 @@
 import { CharacterType, EpisodeType } from '../../Types';
 import { instance } from "../Instance";
 
-export const getAllEpisodes = async (): Promise<EpisodeType[]> => {
-    const response = await instance.get('/episode');
-    return response.data.results;
-}
 
+export const getAllEpisodes = async (page: number): Promise<{ results: EpisodeType[], totalPages: number }> => {
+    const response = await instance.get(`/episode?page=${page}`);
+    return {
+        results: response.data.results,
+        totalPages: response.data.info.pages
+    };
+};
 export const episodeChars = async (id: number): Promise<CharacterType[]> => {
     const response = await instance.get(`/episode/${id}/`);
     const characters = response.data.characters;
