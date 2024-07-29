@@ -9,6 +9,9 @@
             color: #ffffff;
         }
     }
+    .page-item{
+        margin: 8px 0 ;
+    }
 
     .page-item.active .page-link {
         background-color: #ffffff;
@@ -21,3 +24,4 @@
         color: #6c757d;
     }
 }
+
