@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Nav, Navbar } from "react-bootstrap"
 import { Link } from 'react-router-dom';
-import './Navbar.scss';
+
 
 
 

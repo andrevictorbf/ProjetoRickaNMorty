@@ -1,9 +1,11 @@
 
 import React from 'react';
 import { CharacterType } from '../../Types';
-import { Button, Card, Col, ListGroup } from 'react-bootstrap';
+import { Badge, Button, Card, Col, ListGroup } from 'react-bootstrap';
+import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import styles from './cards.module.scss';
 
 interface CharactersCardProps {
   characters: CharacterType[] | null;
@@ -18,18 +20,15 @@ export const CharactersCard: React.FC<CharactersCardProps> = ({ characters }) =>
     <div>
       {characters.map(character => (
         <Col key={character.id} md={4} className=" mb-4 ">
-          <Card className="shadow-sm mb-5 bg-body rounded" style={{ width: '18rem' }}>
+          <Card className={`${styles.cards} shadow-sm mb-5 bg-body rounded`}>
             <Card.Img variant="top" src={character.image} />
             <Card.Body>
               <Card.Title>{character.name}</Card.Title>
-              <Card.Text>
-                {character.status}
-              </Card.Text>
             </Card.Body>
-            <ListGroup className="list-group-flush">
+            <ListGroup className="list-group-flush ">
               <ListGroup.Item><Card.Text>Gênero: {character.gender} </Card.Text></ListGroup.Item>
-              <ListGroup.Item>{character.origin.name}</ListGroup.Item>
-              <ListGroup.Item>{character.location.name}</ListGroup.Item>
+              <ListGroup.Item><Card.Text> Origem: <br/> {character.origin.name}</Card.Text></ListGroup.Item>
+              <ListGroup.Item> <Card.Text> Última Localizacao: <br/> {character.location.name}</Card.Text></ListGroup.Item>
             </ListGroup>
             <Card.Body className="d-flex justify-content-center">
               <Link to={`/character/${character.id}`}>
@@ -37,17 +36,22 @@ export const CharactersCard: React.FC<CharactersCardProps> = ({ characters }) =>
               </Link>
             </Card.Body>
 
+            {character.status === 'Dead' ? (
+              <Badge className={`${styles.badge} position-absolute`} pill bg="danger">
+                {character.status}
+              </Badge>
+            ) : 
+            character.status === 'Alive' ? (
+              <Badge className={`${styles.badge} position-absolute`} pill bg="success">
+                {character.status}
+              </Badge>
+            ) : (
+              <Badge className={`${styles.badge} position-absolute`} pill bg="secondary">
+                {character.status}
+              </Badge>
+            )}
           </Card>
-          {/* esqueleto dos cards 
-                // <div key={character.id}>
-                //     <h2>{character.name}</h2>
-                //     <p>{character.status}</p>
-                //     <img src={character.image} alt={character.name} />
-                //     <p>{character.species}</p>
-                //     <p>{character.gender}</p>
-                //     <p>Origem: {character.origin.name}</p>
-                //     <p>Localização: {character.location.name}</p>
-                // </div> */}
+
         </Col>
       ))}
     </div>
