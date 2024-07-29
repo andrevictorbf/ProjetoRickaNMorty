@@ -14,6 +14,8 @@ Breve descrição do que foi feito -
 
 Conhecimentos exercitados e aprendidos: Front-End, Git, HTML, SCSS, React, Consumo e manilulacao de API
 
+Os commits podem ser vistos na pasta projRickNMortyV5
+
 
 
 
