@@ -25,6 +25,7 @@ export const Episodes: React.FC = () => {
 
         fetchEpisodes(currentPage);
     }, [currentPage]);
+    
     return (
 
 

@@ -9,6 +9,12 @@ export const getAllCharacters = async (page: number): Promise<{ results: Charact
         totalPages: response.data.info.pages
     };
 };
+export const getCaroseulChars = async (): Promise<{ results: CharacterType[]}> => {
+    const response = await instance.get('/character');
+    return {
+        results: response.data.results,
+    };
+};
 
 export const getSingleCharacter = async (id: number): Promise<CharacterType> => {
     const response = await instance.get(`/character/${id}`);
